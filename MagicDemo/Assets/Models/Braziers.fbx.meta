@@ -6,10 +6,27 @@ ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
+    100002: polySurface1170
+    100004: polySurface1171
+    100006: polySurface1172
+    100008: polySurface1173
+    100010: transform60
+    100012: transform61
+    100014: transform62
     400000: //RootNode
+    400002: polySurface1170
+    400004: polySurface1171
+    400006: polySurface1172
+    400008: polySurface1173
+    400010: transform60
+    400012: transform61
+    400014: transform62
     2300000: //RootNode
+    2300002: polySurface1173
     3300000: //RootNode
+    3300002: polySurface1173
     4300000: polySurface1127
+    4300002: polySurface1173
   materials:
     importMaterials: 0
     materialName: 0
