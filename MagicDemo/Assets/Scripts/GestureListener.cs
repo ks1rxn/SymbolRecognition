@@ -20,14 +20,14 @@ public class GestureListener : MonoBehaviour {
 	}
 
 	[SerializeField]
-	private GameObject m_drawingIndicator;
+	private ParticleSystem m_drawingIndicator;
 
 	#endregion
 
 	private GestureListenerState m_state;
 
 	protected void Awake() {
-		m_drawingIndicator.SetActive(false);
+		m_drawingIndicator.Stop();
 		m_state = GestureListenerState.Idle;
 	}
 
@@ -35,13 +35,13 @@ public class GestureListener : MonoBehaviour {
 		switch (m_state) {
 			case GestureListenerState.Idle:
 				if (MyHand.hoveringInteractable == null && MyHand.GetStandardInteractionButtonDown()) {
-					m_drawingIndicator.SetActive(true);
+					m_drawingIndicator.Play();
 					m_state = GestureListenerState.Listening;
 				}
 				break;
 			case GestureListenerState.Listening:
 				if (MyHand.GetStandardInteractionButtonUp()) {
-					m_drawingIndicator.SetActive(false);
+					m_drawingIndicator.Stop();
 					Game.EventService.SendMessage(new CastGodsHandMessage(transform.position));
 					m_state = GestureListenerState.Idle;
 				}
