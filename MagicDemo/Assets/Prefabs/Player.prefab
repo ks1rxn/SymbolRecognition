@@ -56,7 +56,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1063670891559782
 GameObject:
   m_ObjectHideFlags: 1
@@ -358,7 +358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1437218589946038
 GameObject:
   m_ObjectHideFlags: 1
@@ -374,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1464542795450668
 GameObject:
   m_ObjectHideFlags: 1
@@ -553,7 +553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1569109522389044
 GameObject:
   m_ObjectHideFlags: 1
@@ -2184,20 +2184,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e3e4511966ba94d8ba0b98c6c62f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherHand: {fileID: 0}
-  startingHandType: 2
-  hoverSphereTransform: {fileID: 0}
-  hoverSphereRadius: 0.05
   hoverLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  hoverSphereRadius: 0.05
+  hoverSphereTransform: {fileID: 0}
   hoverUpdateInterval: 0.1
   noSteamVRFallbackCamera: {fileID: 20363989832601262}
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
-  controllerPrefab: {fileID: 0}
+  otherHand: {fileID: 0}
   showDebugText: 0
   spewDebugText: 0
+  startingHandType: 2
 --- !u!114 &114113614872994898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2239,6 +2238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_drawingIndicator: {fileID: 198483352040887652}
+  m_handAnimator: {fileID: 95966141353801732}
 --- !u!114 &114161278792584530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2416,6 +2416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_drawingIndicator: {fileID: 198387844631674754}
+  m_handAnimator: {fileID: 95516240522575254}
 --- !u!114 &114642511807957200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2441,20 +2442,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e3e4511966ba94d8ba0b98c6c62f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherHand: {fileID: 114851599503044834}
-  startingHandType: 2
-  hoverSphereTransform: {fileID: 0}
-  hoverSphereRadius: 0.05
   hoverLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  hoverSphereRadius: 0.05
+  hoverSphereTransform: {fileID: 0}
   hoverUpdateInterval: 0.1
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
-  controllerPrefab: {fileID: 168468, guid: 3f39fc63a93686e4a8e9168ee73f24d9, type: 2}
+  otherHand: {fileID: 114851599503044834}
   showDebugText: 0
   spewDebugText: 0
+  startingHandType: 2
 --- !u!114 &114743809122053930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2503,20 +2503,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e3e4511966ba94d8ba0b98c6c62f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherHand: {fileID: 114671114133305812}
-  startingHandType: 2
-  hoverSphereTransform: {fileID: 0}
-  hoverSphereRadius: 0.05
   hoverLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  hoverSphereRadius: 0.05
+  hoverSphereTransform: {fileID: 0}
   hoverUpdateInterval: 0.1
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
-  controllerPrefab: {fileID: 168468, guid: 3f39fc63a93686e4a8e9168ee73f24d9, type: 2}
+  otherHand: {fileID: 114671114133305812}
   showDebugText: 0
   spewDebugText: 0
+  startingHandType: 2
 --- !u!114 &114944214461249752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6074,7 +6073,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1722615073
+  randomSeed: 1966664629
   InitialModule:
     serializedVersion: 3
     enabled: 1
