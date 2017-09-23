@@ -21,6 +21,8 @@ public class GestureListener : MonoBehaviour {
 
 	[SerializeField]
 	private ParticleSystem m_drawingIndicator;
+	[SerializeField]
+	private Animator m_handAnimator;
 
 	#endregion
 
@@ -28,6 +30,7 @@ public class GestureListener : MonoBehaviour {
 
 	protected void Awake() {
 		m_drawingIndicator.Stop();
+		m_handAnimator.SetBool("IsTriggered", false);
 		m_state = GestureListenerState.Idle;
 	}
 
@@ -36,12 +39,14 @@ public class GestureListener : MonoBehaviour {
 			case GestureListenerState.Idle:
 				if (MyHand.hoveringInteractable == null && MyHand.GetStandardInteractionButtonDown()) {
 					m_drawingIndicator.Play();
+					m_handAnimator.SetBool("IsTriggered", true);
 					m_state = GestureListenerState.Listening;
 				}
 				break;
 			case GestureListenerState.Listening:
 				if (MyHand.GetStandardInteractionButtonUp()) {
 					m_drawingIndicator.Stop();
+					m_handAnimator.SetBool("IsTriggered", false);
 					Game.EventService.SendMessage(new CastGodsHandMessage(transform.position));
 					m_state = GestureListenerState.Idle;
 				}
