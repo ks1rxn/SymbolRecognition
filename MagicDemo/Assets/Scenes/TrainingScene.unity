@@ -204,58 +204,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a133d953b8b7ed4abd79d3cdebcf62c, type: 3}
   m_IsPrefabParent: 0
---- !u!1001 &1053295661
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4568608031664064, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568608031664064, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568608031664064, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568608031664064, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568608031664064, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568608031664064, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568608031664064, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568608031664064, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198981826575452984, guid: 4bcf2aac53b7e9d46b18476fbc478edc,
-        type: 2}
-      propertyPath: ShapeModule.m_SkinnedMeshRenderer
-      value: 
-      objectReference: {fileID: 1140819820}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 4bcf2aac53b7e9d46b18476fbc478edc, type: 2}
-  m_IsPrefabParent: 0
---- !u!137 &1140819820 stripped
-SkinnedMeshRenderer:
-  m_PrefabParentObject: {fileID: 137816289317280172, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-    type: 2}
-  m_PrefabInternal: {fileID: 258459031}
 --- !u!1001 &1190505080
 Prefab:
   m_ObjectHideFlags: 0
