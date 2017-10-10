@@ -75,7 +75,7 @@ public class GestureListener : MonoBehaviour {
 
 	private void ListeningState() {
 		m_points.Add(m_drawingFinger.transform.position);
-//		Game.EventService.SendMessage(new DebugSpellTrackerMessage(m_drawingFinger.transform.position));
+
 		if (MyHand.GetStandardInteractionButtonUp()) {
 			CorrectPointsCount();
 			Vector3 center = CalculateSpellCenter();
@@ -102,26 +102,16 @@ public class GestureListener : MonoBehaviour {
 				m_points[i] = pointNew;
 			}
 
-//			Vector3 x = MakeVectorInNewBasis(new Vector3(50, 0, 0), newRow1, newRow2, newRow3);
-//			Vector3 y = MakeVectorInNewBasis(new Vector3(0, 50, 0), newRow1, newRow2, newRow3);
-//			Vector3 z = MakeVectorInNewBasis(new Vector3(0, 0, 50), newRow1, newRow2, newRow3);
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, center + x, Quaternion.identity, 1.0f));
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, center + y, Quaternion.identity, 1.0f));
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, center + z, Quaternion.identity, 1.0f));
-
 			foreach (Vector3 point in m_points) {
-				Debug.Log(point);
-				Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, point, Quaternion.identity, 0.1f));
+//				Debug.Log(point);
+//				Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, point, Quaternion.identity, 0.1f));
 			}
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, Vector3.zero, Quaternion.identity,  2.0f));
 
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, center, Quaternion.identity,  2.0f));
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, center + targetVector.normalized * 4, Quaternion.identity,  2.0f));
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, center + targetUpVector.normalized * 4, Quaternion.identity,  2.0f));
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, center + targetRightVector.normalized * 4, Quaternion.identity,  2.0f));
+			float result = ShapeRecognizer.Analyze(m_points);
+			if (result < 10) {
+				Game.EventService.SendMessage(new CastGodsHandMessage(center));
+			}
 
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Plane, center, Quaternion.LookRotation(targetVector, Vector3.up),  1.0f));
-//			Game.EventService.SendMessage(new CastGodsHandMessage(m_drawingFinger.transform.position));
 			ToIdleState();		
 		}
 	}
