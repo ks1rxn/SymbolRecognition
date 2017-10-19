@@ -107,9 +107,17 @@ public class GestureListener : MonoBehaviour {
 //				Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, point, Quaternion.identity, 0.1f));
 			}
 
-			float result = ShapeRecognizer.Analyze(m_points);
-			if (result < 10) {
-				Game.EventService.SendMessage(new CastGodsHandMessage(center));
+			ShapeRecognizerResult result = ShapeRecognizer.Analyze(m_points);
+			if (result.Value <= ShapeRecognizerResult.MinPassValue) {
+				switch (result.Type) {
+					case ShapeType.Circle:
+						Game.EventService.SendMessage(new CastGodsHandMessage(center));
+						break;
+					case ShapeType.S:
+						break;
+					case ShapeType.Line:
+						break;
+				}
 			}
 
 			ToIdleState();		

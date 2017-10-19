@@ -10445,7 +10445,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1211678762192964, guid: 710b9334a8317a944a3e19083c089896, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108301743675963826, guid: 710b9334a8317a944a3e19083c089896,
         type: 2}
@@ -21120,7 +21120,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1211678762192964, guid: 710b9334a8317a944a3e19083c089896, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108301743675963826, guid: 710b9334a8317a944a3e19083c089896,
         type: 2}
@@ -24636,7 +24636,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1211678762192964, guid: 710b9334a8317a944a3e19083c089896, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 710b9334a8317a944a3e19083c089896, type: 2}
@@ -35231,7 +35231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1517068589
 Transform:
   m_ObjectHideFlags: 0
@@ -35331,7 +35331,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1211678762192964, guid: 710b9334a8317a944a3e19083c089896, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108301743675963826, guid: 710b9334a8317a944a3e19083c089896,
         type: 2}
@@ -45641,7 +45641,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1905303407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91116d23edfc1eb498d248e071b29442, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a15b225ed23cd5438c11c324eb38b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_godsHandPrefab: {fileID: 1886959286406498, guid: 14636c476b6063f46b7994e10ff6ed86,
