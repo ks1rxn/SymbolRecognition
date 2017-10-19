@@ -16,17 +16,11 @@ public class ShapeRecognizer {
 
 	public static ShapeRecognizerResult Analyze(List<Vector3> points) {
 		ResizeShape(points);
-//		foreach (Vector3 point in points) {
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, point, Quaternion.identity, 0.1f));
-//		}
-//		foreach (Vector3 point in m_s.Points) {
-//			Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, point, Quaternion.identity, 0.2f));
-//		}
-
+		
 		ShapeRecognizerResult result = new ShapeRecognizerResult();
 		foreach (Shape shape in m_shapes) {
-			float shapeResult = AnalyzeShape(0, points, shape.Points);
-//			Debug.Log(shape.Type + ":" + shapeResult);
+			float shapeResult = AnalyzeShape(shape.Type, points, shape.Points);
+			Debug.Log(shape.Type + ":" + shapeResult);
 			if (shapeResult < result.Value) {
 				result.Value = shapeResult;
 				result.Type = shape.Type;
@@ -60,8 +54,7 @@ public class ShapeRecognizer {
 		return new Vector2(Mathf.Abs(rightX - leftX), Mathf.Abs(topY - bottomY));
 	}
 
-	private static float AnalyzeShape(int type, List<Vector3> shape, List<Vector3> example) {
-		List<float> distances  = new List<float>(128);
+	private static float AnalyzeShape(ShapeType type, List<Vector3> shape, List<Vector3> example) {
 		List<float> pureDistances = new List<float>(128);
 		for (int i = 0; i != shape.Count; i++) {
 			int closestIndex = -1;
@@ -73,10 +66,15 @@ public class ShapeRecognizer {
 					closestIndex = g;
 				}
 			}
-			if (type == 1) {
-				Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, example[closestIndex] + (shape[i] - example[closestIndex]) / 2, Quaternion.identity, 0.05f));	
-			}
-			distances.Add(closestDist * closestDist);
+//			if (type == ShapeType.Circle) {
+//				foreach (Vector3 point in shape) {
+//					Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, point, Quaternion.identity, 0.1f));
+//				}
+//				foreach (Vector3 point in example) {
+//					Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, point, Quaternion.identity, 0.2f));
+//				}
+//				Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, example[closestIndex] + (shape[i] - example[closestIndex]) / 2, Quaternion.identity, 0.05f));	
+//			}
 			pureDistances.Add(closestDist);
 		}
 //		WriteListToFile(type + "_dist_raw.txt", pureDistances);
@@ -93,9 +91,9 @@ public class ShapeRecognizer {
 		for (int i = 0; i != pureDistances.Count; i++) {
 			disp += Mathf.Pow(pureDistances[i] - med, 2);
 		}
-//		disp = Mathf.Sqrt(disp / pureDistances.Count) * 100;
-		disp = disp / pureDistances.Count * 100;
-		return disp * med;
+		disp = Mathf.Sqrt(disp / pureDistances.Count) * 100;
+//		Debug.Log(disp + " " + med * med * med);
+		return disp * med * med * med;
 	}
 
 	private static void WriteListToFile(string fileName, List<float> values) {

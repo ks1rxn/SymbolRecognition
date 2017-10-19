@@ -1,6 +1,6 @@
 ﻿
 public class ShapeRecognizerResult {
-	public const float MinPassValue = 5;
+	public const float MinPassValue = 20;
 
 	private ShapeType m_type;
 	private float m_value;
