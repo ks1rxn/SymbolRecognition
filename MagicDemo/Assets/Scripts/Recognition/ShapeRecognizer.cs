@@ -20,7 +20,7 @@ public class ShapeRecognizer {
 		ShapeRecognizerResult result = new ShapeRecognizerResult();
 		foreach (Shape shape in m_shapes) {
 			float shapeResult = AnalyzeShape(shape.Type, points, shape.Points);
-			Debug.Log(shape.Type + ":" + shapeResult);
+//			Debug.Log(shape.Type + ":" + shapeResult);
 			if (shapeResult < result.Value) {
 				result.Value = shapeResult;
 				result.Type = shape.Type;

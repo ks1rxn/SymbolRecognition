@@ -10,6 +10,7 @@ public class EnergyActivation : MonoBehaviour {
 	private IEnumerator WaitForAnimation() {
 		yield return new WaitForSecondsRealtime(0.83f);
 		Game.EventService.SendMessage(new SpawnEnergyThusterMessage(gameObject.transform.position, gameObject.transform.rotation));
+		Destroy(gameObject);
 	}
 
 }

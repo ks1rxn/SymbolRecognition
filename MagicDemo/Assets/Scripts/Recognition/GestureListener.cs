@@ -26,6 +26,8 @@ public class GestureListener : MonoBehaviour {
 	private GameObject m_drawingFinger;
 	[SerializeField]
 	private Player m_player;
+	[SerializeField]
+	private HandThruster m_thruster;
 
 	#endregion
 
@@ -33,6 +35,7 @@ public class GestureListener : MonoBehaviour {
 	private List<Vector3> m_points; 
 
 	protected void Awake() {
+		m_thruster.Initiate(MyHand);
 		ToIdleState();
 	}
 
@@ -208,6 +211,12 @@ public class GestureListener : MonoBehaviour {
 		}
 		center /= m_points.Count;
 		return center;
+	}
+
+	public HandThruster Thruster {
+		get {
+			return m_thruster;
+		}
 	}
 
 	private enum GestureListenerState {
