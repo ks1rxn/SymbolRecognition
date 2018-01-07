@@ -52,6 +52,7 @@ public class GestureListener : MonoBehaviour {
 
 		foreach (ParticleSystem system in m_drawingIndicator) {
 			system.Stop();
+			system.Clear();
 		}
 		m_handAnimator.SetBool("IsTriggered", false);
 	}

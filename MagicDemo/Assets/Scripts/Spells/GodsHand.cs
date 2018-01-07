@@ -18,7 +18,8 @@ public class GodsHand : MonoBehaviour {
 	}
 
 	private void OnHandHoverBegin(Hand hand) {
-		
+		Game.EventService.SendMessage(new SpawnEnergyActivationMessage(gameObject.transform.position, gameObject.transform.rotation));
+		Destroy(gameObject);
 	}
 
 	private void OnHandHoverEnd(Hand hand) {}
