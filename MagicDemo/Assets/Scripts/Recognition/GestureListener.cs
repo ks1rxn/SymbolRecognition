@@ -111,7 +111,7 @@ public class GestureListener : MonoBehaviour {
 			if (result.Value <= ShapeRecognizerResult.MinPassValue) {
 				switch (result.Type) {
 					case ShapeType.Circle:
-						Game.EventService.SendMessage(new CastGodsHandMessage(center));
+						Game.EventService.SendMessage(new CastGodsHandMessage(center, Quaternion.LookRotation(targetVector, targetUpVector)));
 						break;
 					case ShapeType.S:
 						break;
