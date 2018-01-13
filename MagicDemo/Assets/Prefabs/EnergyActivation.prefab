@@ -1581,8 +1581,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1901687774874816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.4}
-  m_LocalScale: {x: 3.24, y: 3.24, z: 3.24}
+  m_LocalPosition: {x: 0, y: 0, z: -0.028}
+  m_LocalScale: {x: 0.0648, y: 0.0648, z: 0.0648}
   m_Children:
   - {fileID: 4749742836130954}
   - {fileID: 4437905098269304}
@@ -3546,8 +3546,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: 557336673
+  scalingMode: 0
+  randomSeed: -121639598
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6826,8 +6826,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -2120364512
+  scalingMode: 0
+  randomSeed: 2141127210
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10089,7 +10089,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 127240554
+  randomSeed: -1071020124
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13369,7 +13369,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -73078325
+  randomSeed: 2078172755
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13970,7 +13970,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 200
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -16631,7 +16631,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1053747823
+  randomSeed: -1639897935
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -17232,7 +17232,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 200
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -19892,8 +19892,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -1712374174
+  scalingMode: 0
+  randomSeed: -77804679
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -23155,7 +23155,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -487019190
+  randomSeed: 483225396
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -26435,7 +26435,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1388443669
+  randomSeed: 230656507
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -27036,7 +27036,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 250
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -29697,7 +29697,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1651731689
+  randomSeed: -21721368
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -30298,7 +30298,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 250
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -32958,8 +32958,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -832248215
+  scalingMode: 0
+  randomSeed: 262271542
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -36220,8 +36220,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -670251535
+  scalingMode: 0
+  randomSeed: -1443678381
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -39500,8 +39500,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: 1951278376
+  scalingMode: 0
+  randomSeed: 124691113
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -42762,8 +42762,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: 1870530330
+  scalingMode: 0
+  randomSeed: 1667942929
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -46024,8 +46024,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: 990811906
+  scalingMode: 0
+  randomSeed: 1223458293
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -49286,8 +49286,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -1309449363
+  scalingMode: 0
+  randomSeed: -1648740555
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -52567,7 +52567,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1724996880
+  randomSeed: 1379545288
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -55835,7 +55835,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 331151898
+  randomSeed: 1249086066
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -59114,8 +59114,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: 434989722
+  scalingMode: 0
+  randomSeed: -797702313
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -62377,7 +62377,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1684324869
+  randomSeed: -1419399310
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -68919,7 +68919,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1323346216
+  randomSeed: 773798990
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -69520,7 +69520,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 200
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -72181,7 +72181,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1763293272
+  randomSeed: 540255629
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -75442,8 +75442,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -328043711
+  scalingMode: 0
+  randomSeed: 1142342878
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -78722,8 +78722,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -513670171
+  scalingMode: 0
+  randomSeed: -479069217
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -81985,7 +81985,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 5887476
+  randomSeed: -700512504
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -82586,7 +82586,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 250
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -85247,7 +85247,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1423125940
+  randomSeed: -1622053283
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -88526,8 +88526,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: 1947871447
+  scalingMode: 0
+  randomSeed: -1727285575
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -91788,8 +91788,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -273619937
+  scalingMode: 0
+  randomSeed: 582354923
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -95069,7 +95069,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1337540862
+  randomSeed: -2014231928
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -98348,8 +98348,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -356340041
+  scalingMode: 0
+  randomSeed: -1264958652
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -101641,7 +101641,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -101693,7 +101693,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -101797,7 +101797,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -101849,7 +101849,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -101901,7 +101901,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -101953,7 +101953,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102005,7 +102005,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102057,7 +102057,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102161,7 +102161,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102213,7 +102213,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102265,7 +102265,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102317,7 +102317,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102369,7 +102369,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102421,7 +102421,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102473,7 +102473,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102629,7 +102629,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102681,7 +102681,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102733,7 +102733,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102785,7 +102785,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102837,7 +102837,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102889,7 +102889,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102941,7 +102941,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -102993,7 +102993,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 200
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -103045,7 +103045,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -103097,7 +103097,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 300
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
