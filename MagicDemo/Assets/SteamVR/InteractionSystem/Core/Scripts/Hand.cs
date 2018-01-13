@@ -446,10 +446,11 @@ namespace Valve.VR.InteractionSystem {
 					continue;
 				}
 
+				//hack: hover object by both hands
 				// Occupied by another hand, so we can't touch it
-				if (otherHand && otherHand.hoveringInteractable == contacting) {
-					continue;
-				}
+//				if (otherHand && otherHand.hoveringInteractable == contacting) {
+//					continue;
+//				}
 
 				// Best candidate so far...
 				var distance = Vector3.Distance(contacting.transform.position, hoverSphereTransform.position);
