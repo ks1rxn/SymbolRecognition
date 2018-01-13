@@ -6995,54 +6995,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4861433904875622, guid: 7f69d6376d8b10e439b0a0db3975e2ba, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 198275015029501086, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: randomSeed
-      value: -836432284
-      objectReference: {fileID: 0}
-    - target: {fileID: 198387844631674754, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1670997510
-      objectReference: {fileID: 0}
-    - target: {fileID: 198041812246166324, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: scalingMode
+    - target: {fileID: 1616816380674542, guid: 7f69d6376d8b10e439b0a0db3975e2ba, type: 2}
+      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198387844631674754, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: scalingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198483352040887652, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: scalingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198483352040887652, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: randomSeed
-      value: -2060906775
-      objectReference: {fileID: 0}
-    - target: {fileID: 198138548623235370, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: scalingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198387844631674754, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 198483352040887652, guid: 7f69d6376d8b10e439b0a0db3975e2ba,
-        type: 2}
-      propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f69d6376d8b10e439b0a0db3975e2ba, type: 2}
