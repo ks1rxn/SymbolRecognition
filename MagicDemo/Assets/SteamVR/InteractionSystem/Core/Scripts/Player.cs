@@ -41,6 +41,19 @@ namespace Valve.VR.InteractionSystem {
 		[Tooltip("Virtual transform corresponding to the meatspace tracking origin. Devices are tracked relative to this.")]
 		public Transform trackingOriginTransform;
 
+		[SerializeField]
+		private TextMesh m_debugViewer;
+		private bool m_showDebugViewer;
+		public bool ShowDebugViewer {
+			get {
+				return m_showDebugViewer;
+			}
+			set {
+				m_showDebugViewer = value;
+				m_debugViewer.gameObject.SetActive(value);
+			}
+		}
+
 		public static Player instance {
 			get {
 				if (_instance == null) {

@@ -70,6 +70,13 @@ namespace Valve.VR.InteractionSystem {
 		public bool spewDebugText;
 		public HandType startingHandType;
 
+		#region MyFields
+
+		[SerializeField]
+		private GestureListener m_gestureListener;
+
+		#endregion
+
 		public ReadOnlyCollection<AttachedObject> AttachedObjects {
 			get {
 				return attachedObjects.AsReadOnly();
@@ -563,6 +570,12 @@ namespace Valve.VR.InteractionSystem {
 
 			if (hoveringInteractable) {
 				hoveringInteractable.SendMessage("HandHoverUpdate", this, SendMessageOptions.DontRequireReceiver);
+			}
+
+			if (controller != null) {
+				if (controller.GetPressDown(EVRButtonId.k_EButton_Grip)) {
+					Player.instance.ShowDebugViewer = !Player.instance.ShowDebugViewer;
+				}
 			}
 		}
 
