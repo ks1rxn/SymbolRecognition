@@ -4,6 +4,7 @@
 //
 //=============================================================================
 
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Valve.VR.InteractionSystem {
@@ -42,15 +43,21 @@ namespace Valve.VR.InteractionSystem {
 		public Transform trackingOriginTransform;
 
 		[SerializeField]
-		private TextMesh m_debugViewer;
-		private bool m_showDebugViewer;
-		public bool ShowDebugViewer {
+		private DebugViewer m_debugInTopRightCornerOfView;
+		[SerializeField]
+		private DebugViewer m_debugInCenterOfView;
+
+		#region Getters
+
+		public DebugViewer DebugInTopRightCornerOfView {
 			get {
-				return m_showDebugViewer;
+				return m_debugInTopRightCornerOfView;
 			}
-			set {
-				m_showDebugViewer = value;
-				m_debugViewer.gameObject.SetActive(value);
+		}
+
+		public DebugViewer DebugInCenterOfView {
+			get {
+				return m_debugInCenterOfView;
 			}
 		}
 
@@ -221,11 +228,21 @@ namespace Valve.VR.InteractionSystem {
 			return null;
 		}
 
+		#endregion
+
 		//-------------------------------------------------
 		private void Awake() {
 			if (trackingOriginTransform == null) {
 				trackingOriginTransform = transform;
 			}
+		}
+
+		private void Start() {
+			m_debugInTopRightCornerOfView.SetActive(false);
+			m_debugInCenterOfView.SetActive(true);
+
+			m_debugInCenterOfView.ShowLine(new DebugViewerLine("...", DebugViewerLineColor.Green), 1);
+			m_debugInTopRightCornerOfView.ShowLine(new DebugViewerLine("No actual debug info", DebugViewerLineColor.Red));
 		}
 
 		//-------------------------------------------------

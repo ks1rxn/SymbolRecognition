@@ -574,7 +574,7 @@ namespace Valve.VR.InteractionSystem {
 
 			if (controller != null) {
 				if (controller.GetPressDown(EVRButtonId.k_EButton_Grip)) {
-					Player.instance.ShowDebugViewer = !Player.instance.ShowDebugViewer;
+					Player.instance.DebugInTopRightCornerOfView.SetActive(!Player.instance.DebugInTopRightCornerOfView.IsActive());
 				}
 			}
 		}
