@@ -2,22 +2,12 @@
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-[RequireComponent(typeof(Hand))]
 public class GestureListener : MonoBehaviour {
 	
 	#region Fields
 
-	private Hand m_hand;
-
-	public Hand MyHand {
-		get {
-			if (m_hand == null) {
-				m_hand = GetComponent<Hand>();
-			}
-			return m_hand;
-		}
-	}
-
+	[SerializeField]
+	private Hand hand;
 	[SerializeField]
 	private ParticleSystem[] m_drawingIndicator;
 	[SerializeField]
@@ -35,11 +25,17 @@ public class GestureListener : MonoBehaviour {
 	private List<Vector3> m_points; 
 
 	protected void Awake() {
-		m_thruster.Initiate(MyHand);
+		m_thruster.Initiate(hand);
 		ToIdleState();
 	}
 
 	protected void Update() {
+		if (hand.GuessCurrentHandType() == Hand.HandType.Right) {
+			Player.instance.DebugInTopRightCornerOfView.ShowLine(new DebugViewerLine(m_state.ToString(), DebugViewerLineColor.Green));
+		} else if (hand.GuessCurrentHandType() == Hand.HandType.Left) {
+			Player.instance.DebugInTopLeftCornerOfView.ShowLine(new DebugViewerLine(m_state.ToString(), DebugViewerLineColor.Green));
+		}
+
 		switch (m_state) {
 			case GestureListenerState.Idle:
 				IdleState();
@@ -61,7 +57,7 @@ public class GestureListener : MonoBehaviour {
 	}
 
 	private void IdleState() {
-		if (MyHand.hoveringInteractable == null && MyHand.GetStandardInteractionButtonDown()) {
+		if (hand.hoveringInteractable == null && hand.buttonsListener.GetStandardInteractionButtonDown()) {
 			ToListeningState();
 		}
 	}
@@ -80,7 +76,7 @@ public class GestureListener : MonoBehaviour {
 	private void ListeningState() {
 		m_points.Add(m_drawingFinger.transform.position);
 
-		if (MyHand.GetStandardInteractionButtonUp()) {
+		if (hand.buttonsListener.GetStandardInteractionButtonUp()) {
 			CorrectPointsCount();
 			Vector3 center = CalculateSpellCenter();
 			Vector3 head = m_player.headCollider.transform.position;

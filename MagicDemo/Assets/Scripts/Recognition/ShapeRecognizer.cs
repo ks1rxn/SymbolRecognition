@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 
 public class ShapeRecognizer {
-	private static List<Shape> m_shapes; 
+	private static List<Shape> m_shapes;
 
 	static ShapeRecognizer() {
 		m_shapes = new List<Shape>();

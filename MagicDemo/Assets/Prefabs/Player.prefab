@@ -241,6 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4349418925325586}
   - component: {fileID: 114851599503044834}
+  - component: {fileID: 114758419910414370}
   - component: {fileID: 114613106689547936}
   m_Layer: 26
   m_Name: MasterHandLeft
@@ -601,6 +602,24 @@ GameObject:
   - component: {fileID: 95612535950887668}
   m_Layer: 0
   m_Name: ThrusterFXLines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1576009629366730
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4111795737824468}
+  - component: {fileID: 23018975972249894}
+  - component: {fileID: 102209709466294824}
+  - component: {fileID: 114515893941964506}
+  m_Layer: 0
+  m_Name: DebugViewererTopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,6 +994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4085777822054792}
   - component: {fileID: 114671114133305812}
+  - component: {fileID: 114058929894955548}
   - component: {fileID: 114133893573826968}
   m_Layer: 26
   m_Name: MasterHandRight
@@ -1128,7 +1148,7 @@ GameObject:
   - component: {fileID: 102289725432525446}
   - component: {fileID: 114023078453226944}
   m_Layer: 0
-  m_Name: DebugViewererTopRight
+  m_Name: DebugViewererTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1318,6 +1338,19 @@ Transform:
   m_Father: {fileID: 4213170977296776}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4111795737824468
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576009629366730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.222, y: 0.093, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4171256128069286}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4125422857427502
 Transform:
   m_ObjectHideFlags: 1
@@ -1355,8 +1388,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4069892532022852}
-  - {fileID: 4448878397885778}
+  - {fileID: 4111795737824468}
   - {fileID: 4886805097369500}
+  - {fileID: 4448878397885778}
   m_Father: {fileID: 4364936819662734}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1662,12 +1696,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1957346749868460}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1257, y: 0.093, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.222, y: 0.093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4171256128069286}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4460504796992478
 Transform:
@@ -2281,6 +2315,38 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!23 &23018975972249894
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576009629366730}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23177575916593116
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -2764,6 +2830,27 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!102 &102209709466294824
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576009629366730}
+  m_Text: 
+  m_OffsetZ: 0.32
+  m_CharacterSize: 0.001
+  m_LineSpacing: 1
+  m_Anchor: 2
+  m_Alignment: 2
+  m_TabSize: 4
+  m_FontSize: 120
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!102 &102289725432525446
 TextMesh:
   serializedVersion: 3
@@ -2772,11 +2859,11 @@ TextMesh:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1957346749868460}
   m_Text: 
-  m_OffsetZ: 0.22
+  m_OffsetZ: 0.32
   m_CharacterSize: 0.001
   m_LineSpacing: 1
-  m_Anchor: 2
-  m_Alignment: 2
+  m_Anchor: 0
+  m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 120
   m_FontStyle: 0
@@ -2843,7 +2930,20 @@ MonoBehaviour:
   showDebugText: 0
   spewDebugText: 0
   startingHandType: 2
-  m_gestureListener: {fileID: 0}
+  gestureListener: {fileID: 0}
+  buttonsListener: {fileID: 0}
+--- !u!114 &114058929894955548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860853209945916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2ec91224bb7d745b835513bc289fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: {fileID: 114671114133305812}
 --- !u!114 &114113614872994898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2884,6 +2984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fafb9ca5dc090409d7157422437913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: {fileID: 114671114133305812}
   m_drawingIndicator:
   - {fileID: 198483352040887652}
   - {fileID: 198634374073712216}
@@ -3030,6 +3131,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3bba2c36dd79242b3157dbcd876bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114515893941964506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576009629366730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751c8edffd5bbca469679926cfc1bf85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textOutput: {fileID: 102209709466294824}
+  m_textBrightness: 1
 --- !u!114 &114519286956522956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3063,6 +3177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fafb9ca5dc090409d7157422437913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: {fileID: 114851599503044834}
   m_drawingIndicator:
   - {fileID: 198387844631674754}
   - {fileID: 198275015029501086}
@@ -3108,7 +3223,8 @@ MonoBehaviour:
   showDebugText: 1
   spewDebugText: 0
   startingHandType: 1
-  m_gestureListener: {fileID: 114133893573826968}
+  gestureListener: {fileID: 114133893573826968}
+  buttonsListener: {fileID: 114058929894955548}
 --- !u!114 &114717025867141626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3144,7 +3260,8 @@ MonoBehaviour:
   rig2DFallback: {fileID: 1239158017376480}
   rigSteamVR: {fileID: 1688172755982908}
   trackingOriginTransform: {fileID: 4364936819662734}
-  m_debugInTopRightCornerOfView: {fileID: 114023078453226944}
+  m_debugInTopRightCornerOfView: {fileID: 114515893941964506}
+  m_debugInTopLeftCornerOfView: {fileID: 114023078453226944}
   m_debugInCenterOfView: {fileID: 114204392338932398}
 --- !u!114 &114751070190656238
 MonoBehaviour:
@@ -3159,6 +3276,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highLightMaterial: {fileID: 2100000, guid: 7b939e5e799d98a469f594828ebab52e, type: 2}
   fireHapticsOnHightlight: 1
+--- !u!114 &114758419910414370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270939279427498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2ec91224bb7d745b835513bc289fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: {fileID: 114851599503044834}
 --- !u!114 &114851599503044834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3183,7 +3312,8 @@ MonoBehaviour:
   showDebugText: 1
   spewDebugText: 0
   startingHandType: 0
-  m_gestureListener: {fileID: 114613106689547936}
+  gestureListener: {fileID: 114613106689547936}
+  buttonsListener: {fileID: 114758419910414370}
 --- !u!114 &114944214461249752
 MonoBehaviour:
   m_ObjectHideFlags: 1

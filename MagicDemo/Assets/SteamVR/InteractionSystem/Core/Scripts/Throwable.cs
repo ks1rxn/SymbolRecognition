@@ -72,7 +72,7 @@ namespace Valve.VR.InteractionSystem
 			// and if it isn't attached to another hand
 			if ( !attached )
 			{
-				if ( hand.GetStandardInteractionButton() )
+				if ( hand.buttonsListener.GetStandardInteractionButton() )
 				{
 					Rigidbody rb = GetComponent<Rigidbody>();
 					if ( rb.velocity.magnitude >= catchSpeedThreshold )
@@ -101,7 +101,7 @@ namespace Valve.VR.InteractionSystem
 		private void HandHoverUpdate( Hand hand )
 		{
 			//Trigger got pressed
-			if ( hand.GetStandardInteractionButtonDown() )
+			if ( hand.buttonsListener.GetStandardInteractionButtonDown() )
 			{
 				hand.AttachObject( gameObject, attachmentFlags, attachmentPoint );
 				ControllerButtonHints.HideButtonHint( hand, Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger );
@@ -202,7 +202,7 @@ namespace Valve.VR.InteractionSystem
 		private void HandAttachedUpdate( Hand hand )
 		{
 			//Trigger got released
-			if ( !hand.GetStandardInteractionButton() )
+			if ( !hand.buttonsListener.GetStandardInteractionButton() )
 			{
 				// Detach ourselves late in the frame.
 				// This is so that any vehicles the player is attached to
