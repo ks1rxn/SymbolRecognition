@@ -3,39 +3,40 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 public class HandThruster : MonoBehaviour {
-	private Queue<Vector3> m_points;
-	private Hand m_hand;
+	private Queue<Vector3> points;
+	private Hand hand;
 
 	public void Initiate(Hand hand) {
-		m_hand = hand;
+		this.hand = hand;
 	}
 
 	protected void OnEnable() {
-		m_points = new Queue<Vector3>(11);
+		points = new Queue<Vector3>(11);
 	}
 
+	//todo: disable is called when game shuts down
 	protected void OnDisable() {
-		if (m_points != null) {
-			int count = m_points.Count;
+		if (points != null) {
+			int count = points.Count;
 			Vector3 med = Vector3.zero;
-			Vector3 previousPoint = m_points.Dequeue();
-			while (m_points.Count > 0) {
-				Vector3 currentPoint = m_points.Dequeue();
+			Vector3 previousPoint = points.Dequeue();
+			while (points.Count > 0) {
+				Vector3 currentPoint = points.Dequeue();
 				med += currentPoint - previousPoint;
 				previousPoint = currentPoint;
 			}
 			med /= count;
 			Game.EventService.SendMessage(new SpawnGodsFireballMessage(previousPoint, med));
 		}
-		m_points = null;
+		points = null;
 	}
 
 	protected void Update() {
-		m_points.Enqueue(transform.position);
-		if (m_points.Count > 10) {
-			m_points.Dequeue();
+		points.Enqueue(transform.position);
+		if (points.Count > 10) {
+			points.Dequeue();
 		}
-		if (m_hand.buttonsListener.GetStandardInteractionButtonUp()) {
+		if (hand.buttonsListener.GetStandardInteractionButtonUp()) {
 			gameObject.SetActive(false);
 		}
 	}

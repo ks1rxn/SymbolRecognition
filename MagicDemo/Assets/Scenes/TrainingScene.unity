@@ -80105,9 +80105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568911b1ef1830840b53071db023da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_spellTracker: {fileID: 1626520950585806, guid: 22d3cd52008dd7c4aa7fa93521908aba,
+  spellTracker: {fileID: 1626520950585806, guid: 22d3cd52008dd7c4aa7fa93521908aba,
     type: 2}
-  m_planeTracker: {fileID: 1461019644316764, guid: 1b1aa701867abca44bd8b51ad49c2fd2,
+  planeTracker: {fileID: 1461019644316764, guid: 1b1aa701867abca44bd8b51ad49c2fd2,
     type: 2}
 --- !u!1 &1772459443
 GameObject:
@@ -90369,13 +90369,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a15b225ed23cd5438c11c324eb38b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_godsHandPrefab: {fileID: 1211678762192964, guid: 710b9334a8317a944a3e19083c089896,
+  godsHandPrefab: {fileID: 1211678762192964, guid: 710b9334a8317a944a3e19083c089896,
     type: 2}
-  m_fireballPrefab: {fileID: 1145864753898414, guid: 25b40245588056a4ca09a12d6935a564,
+  fireballPrefab: {fileID: 1145864753898414, guid: 25b40245588056a4ca09a12d6935a564,
     type: 2}
-  m_enegyActivationPrefab: {fileID: 1889317923700666, guid: 44573ef2024fd7d4f8c32da817fc46b5,
+  enegyActivationPrefab: {fileID: 1889317923700666, guid: 44573ef2024fd7d4f8c32da817fc46b5,
     type: 2}
-  m_enegyThrusterPrefab: {fileID: 1491623685782460, guid: c4f8ff332e3a02341bcf4b32f7e6ae98,
+  enegyThrusterPrefab: {fileID: 1491623685782460, guid: c4f8ff332e3a02341bcf4b32f7e6ae98,
     type: 2}
 --- !u!1 &1942005998
 GameObject:

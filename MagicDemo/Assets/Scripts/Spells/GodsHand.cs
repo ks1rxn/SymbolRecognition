@@ -5,7 +5,7 @@ using Valve.VR.InteractionSystem;
 [RequireComponent(typeof(Interactable))]
 public class GodsHand : MonoBehaviour {
 	private readonly Hand.AttachmentFlags attachmentFlags = Hand.defaultAttachmentFlags & ~Hand.AttachmentFlags.SnapOnAttach & ~Hand.AttachmentFlags.DetachOthers;
-	private Queue<Vector3> m_points;
+	private Queue<Vector3> points;
 
 	private void HandHoverUpdate(Hand hand) {}
 

@@ -2,13 +2,13 @@
 
 public class SpellsHolder : MonoBehaviour {
 	[SerializeField]
-	private GameObject m_godsHandPrefab;
+	private GameObject godsHandPrefab;
 	[SerializeField]
-	private GameObject m_fireballPrefab;
+	private GameObject fireballPrefab;
 	[SerializeField]
-	private GameObject m_enegyActivationPrefab;
+	private GameObject enegyActivationPrefab;
 	[SerializeField]
-	private GameObject m_enegyThrusterPrefab;
+	private GameObject enegyThrusterPrefab;
 
 	protected void Awake() { 
 		Game.EventService.RegisterListener(typeof(CastGodsHandMessage), OnCastGodsHand);
@@ -19,24 +19,24 @@ public class SpellsHolder : MonoBehaviour {
 
 	private void OnCastGodsHand(IMessage msg) {
 		CastGodsHandMessage message = (CastGodsHandMessage) msg;
-		Instantiate(m_godsHandPrefab, message.CastPosition, message.Rotation, transform);
+		Instantiate(godsHandPrefab, message.CastPosition, message.Rotation, transform);
 	}
 
 	private void OnSpawnGodsFireball(IMessage msg) {
 		SpawnGodsFireballMessage message = (SpawnGodsFireballMessage) msg;
-		GameObject go = Instantiate(m_fireballPrefab, message.CastPosition, Quaternion.identity, transform);
+		GameObject go = Instantiate(fireballPrefab, message.CastPosition, Quaternion.identity, transform);
 		Rigidbody body = go.GetComponent<Rigidbody>();
 		body.velocity = message.Speed * 200;
 	}
 
 	private void OnCastEnergyActivation(IMessage msg) {
 		SpawnEnergyActivationMessage message = (SpawnEnergyActivationMessage) msg;
-		Instantiate(m_enegyActivationPrefab, message.CastPosition, message.Rotation, transform);
+		Instantiate(enegyActivationPrefab, message.CastPosition, message.Rotation, transform);
 	}
 
 	private void OnCastEnergyThruster(IMessage msg) {
 		SpawnEnergyThusterMessage message = (SpawnEnergyThusterMessage) msg;
-		Instantiate(m_enegyThrusterPrefab, message.CastPosition, message.Rotation, transform);
+		Instantiate(enegyThrusterPrefab, message.CastPosition, message.Rotation, transform);
 	}
 
 }

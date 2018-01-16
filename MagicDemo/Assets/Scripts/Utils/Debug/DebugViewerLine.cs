@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 
 public class DebugViewerLine {
-	private string m_text;
-	private DebugViewerLineColor m_color;
+	private string text;
+	private DebugViewerLineColor color;
 
 	public DebugViewerLine(string text, DebugViewerLineColor color) {
-		m_text = text;
-		m_color = color;
+		this.text = text;
+		this.color = color;
 	}
 
 	public string MakeText(float brightness) {
 		int brightnessRounded = Mathf.RoundToInt(Mathf.Clamp01(brightness) * 255);
-		return "<color=\"#" + MakeColorString(m_color) + brightnessRounded.ToString("X2") + "\">" + m_text + "</color>";
+		return "<color=\"#" + MakeColorString(color) + brightnessRounded.ToString("X2") + "\">" + text + "</color>";
 	}
 
 	private string MakeColorString(DebugViewerLineColor color) {

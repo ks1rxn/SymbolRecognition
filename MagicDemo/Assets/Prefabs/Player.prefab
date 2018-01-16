@@ -2898,13 +2898,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 114671114133305812}
-  m_drawingIndicator:
+  drawingIndicator:
   - {fileID: 198483352040887652}
   - {fileID: 198634374073712216}
-  m_handAnimator: {fileID: 95966141353801732}
-  m_drawingFinger: {fileID: 1299561594958926}
-  m_player: {fileID: 114743809122053930}
-  m_thruster: {fileID: 114717025867141626}
+  handAnimator: {fileID: 95966141353801732}
+  drawingFinger: {fileID: 1299561594958926}
+  thruster: {fileID: 114717025867141626}
 --- !u!114 &114168039739577046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3091,13 +3090,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 114851599503044834}
-  m_drawingIndicator:
+  drawingIndicator:
   - {fileID: 198387844631674754}
   - {fileID: 198275015029501086}
-  m_handAnimator: {fileID: 95516240522575254}
-  m_drawingFinger: {fileID: 1165116548685722}
-  m_player: {fileID: 114743809122053930}
-  m_thruster: {fileID: 114519286956522956}
+  handAnimator: {fileID: 95516240522575254}
+  drawingFinger: {fileID: 1165116548685722}
+  thruster: {fileID: 114519286956522956}
 --- !u!114 &114642511807957200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16557,7 +16555,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -2060906775
+  randomSeed: 1347527895
   InitialModule:
     serializedVersion: 3
     enabled: 1

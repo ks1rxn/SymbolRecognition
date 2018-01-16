@@ -2,29 +2,29 @@
 public class ShapeRecognizerResult {
 	public const float MinPassValue = 20;
 
-	private ShapeType m_type;
-	private float m_value;
+	private ShapeType type;
+	private float value;
 
 	public ShapeRecognizerResult() {
-		m_type = ShapeType.Circle;
-		m_value = float.MaxValue;
+		type = ShapeType.Circle;
+		value = float.MaxValue;
 	}
 
 	public ShapeType Type {
 		get {
-			return m_type;
+			return type;
 		}
 		set {
-			m_type = value;
+			type = value;
 		}
 	}
 
 	public float Value {
 		get {
-			return m_value;
+			return value;
 		}
 		set {
-			m_value = value;
+			this.value = value;
 		}
 	}
 

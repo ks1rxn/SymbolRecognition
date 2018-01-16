@@ -4,21 +4,21 @@ using System.IO;
 using UnityEngine;
 
 public class ShapeRecognizer {
-	private static List<Shape> m_shapes;
+	private static List<Shape> shapes;
 
 	static ShapeRecognizer() {
-		m_shapes = new List<Shape>();
+		shapes = new List<Shape>();
 
-		m_shapes.Add(LoadShape("s"));
-		m_shapes.Add(LoadShape("circle"));
-		m_shapes.Add(LoadShape("line"));
+		shapes.Add(LoadShape("s"));
+		shapes.Add(LoadShape("circle"));
+		shapes.Add(LoadShape("line"));
 	}
 
 	public static ShapeRecognizerResult Analyze(List<Vector3> points) {
 		ResizeShape(points);
 		
 		ShapeRecognizerResult result = new ShapeRecognizerResult();
-		foreach (Shape shape in m_shapes) {
+		foreach (Shape shape in shapes) {
 			float shapeResult = AnalyzeShape(shape.Type, points, shape.Points);
 //			Debug.Log(shape.Type + ":" + shapeResult);
 			if (shapeResult < result.Value) {

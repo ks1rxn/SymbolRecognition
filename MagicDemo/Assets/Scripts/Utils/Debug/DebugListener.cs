@@ -2,9 +2,9 @@
 
 public class DebugListener : MonoBehaviour {
 	[SerializeField]
-	private GameObject m_spellTracker;
+	private GameObject spellTracker;
 	[SerializeField]
-	private GameObject m_planeTracker;
+	private GameObject planeTracker;
 
 
 	protected void Awake() {
@@ -16,10 +16,10 @@ public class DebugListener : MonoBehaviour {
 		GameObject prefab = null;
 		switch (message.Form) {
 			case DebugSpellTrackerForm.Plane:
-				prefab = m_planeTracker;
+				prefab = planeTracker;
 				break;
 			default:
-				prefab = m_spellTracker;
+				prefab = spellTracker;
 				break;
 		}
 		GameObject go = Instantiate(prefab, message.TrackPosition, message.Rotation, transform);
