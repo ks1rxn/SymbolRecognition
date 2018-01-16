@@ -35,7 +35,7 @@ public class HandThruster : MonoBehaviour {
 		if (m_points.Count > 10) {
 			m_points.Dequeue();
 		}
-		if (m_hand.GetStandardInteractionButtonUp()) {
+		if (m_hand.buttonsListener.GetStandardInteractionButtonUp()) {
 			gameObject.SetActive(false);
 		}
 	}

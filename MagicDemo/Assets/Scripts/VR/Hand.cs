@@ -73,7 +73,8 @@ namespace Valve.VR.InteractionSystem {
 		#region MyFields
 
 		[SerializeField]
-		private GestureListener m_gestureListener;
+		private GestureListener gestureListener;
+		public ButtonsListener buttonsListener;
 
 		#endregion
 
@@ -572,10 +573,9 @@ namespace Valve.VR.InteractionSystem {
 				hoveringInteractable.SendMessage("HandHoverUpdate", this, SendMessageOptions.DontRequireReceiver);
 			}
 
-			if (controller != null) {
-				if (controller.GetPressDown(EVRButtonId.k_EButton_Grip)) {
-					Player.instance.DebugInTopRightCornerOfView.SetActive(!Player.instance.DebugInTopRightCornerOfView.IsActive());
-				}
+			if (buttonsListener.GetGripButtonDown()) {
+				Player.instance.DebugInTopRightCornerOfView.SetActive(!Player.instance.DebugInTopRightCornerOfView.IsActive());
+				Player.instance.DebugInTopLeftCornerOfView.SetActive(!Player.instance.DebugInTopLeftCornerOfView.IsActive());
 			}
 		}
 
@@ -651,48 +651,6 @@ namespace Valve.VR.InteractionSystem {
 			if (hoveringInteractable == interactable) {
 				hoverLocked = false;
 			}
-		}
-
-		//-------------------------------------------------
-		// Was the standard interaction button just pressed? In VR, this is a trigger press. In 2D fallback, this is a mouse left-click.
-		//-------------------------------------------------
-		public bool GetStandardInteractionButtonDown() {
-			if (noSteamVRFallbackCamera) {
-				return Input.GetMouseButtonDown(0);
-			}
-			if (controller != null) {
-				return controller.GetHairTriggerDown();
-			}
-
-			return false;
-		}
-
-		//-------------------------------------------------
-		// Was the standard interaction button just released? In VR, this is a trigger press. In 2D fallback, this is a mouse left-click.
-		//-------------------------------------------------
-		public bool GetStandardInteractionButtonUp() {
-			if (noSteamVRFallbackCamera) {
-				return Input.GetMouseButtonUp(0);
-			}
-			if (controller != null) {
-				return controller.GetHairTriggerUp();
-			}
-
-			return false;
-		}
-
-		//-------------------------------------------------
-		// Is the standard interaction button being pressed? In VR, this is a trigger press. In 2D fallback, this is a mouse left-click.
-		//-------------------------------------------------
-		public bool GetStandardInteractionButton() {
-			if (noSteamVRFallbackCamera) {
-				return Input.GetMouseButton(0);
-			}
-			if (controller != null) {
-				return controller.GetHairTrigger();
-			}
-
-			return false;
 		}
 
 		//-------------------------------------------------

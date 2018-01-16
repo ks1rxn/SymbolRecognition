@@ -218,7 +218,7 @@ namespace Valve.VR.InteractionSystem
 		{
 			ControllerButtonHints.HideButtonHint( hand, Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger );
 
-			if ( driving && hand.GetStandardInteractionButton() )
+			if ( driving && hand.buttonsListener.GetStandardInteractionButton() )
 			{
 				StartCoroutine( HapticPulses( hand.controller, 1.0f, 10 ) );
 			}
@@ -231,7 +231,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private void HandHoverUpdate( Hand hand )
 		{
-			if ( hand.GetStandardInteractionButtonDown() )
+			if ( hand.buttonsListener.GetStandardInteractionButtonDown() )
 			{
 				// Trigger was just pressed
 				lastHandProjected = ComputeToTransformProjected( hand.hoverSphereTransform );
@@ -249,7 +249,7 @@ namespace Valve.VR.InteractionSystem
 
 				ControllerButtonHints.HideButtonHint( hand, Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger );
 			}
-			else if ( hand.GetStandardInteractionButtonUp() )
+			else if ( hand.buttonsListener.GetStandardInteractionButtonUp() )
 			{
 				// Trigger was just released
 				if ( hoverLock )
@@ -258,7 +258,7 @@ namespace Valve.VR.InteractionSystem
 					handHoverLocked = null;
 				}
 			}
-			else if ( driving && hand.GetStandardInteractionButton() && hand.hoveringInteractable == GetComponent<Interactable>() )
+			else if ( driving && hand.buttonsListener.GetStandardInteractionButton() && hand.hoveringInteractable == GetComponent<Interactable>() )
 			{
 				ComputeAngle( hand );
 				UpdateAll();

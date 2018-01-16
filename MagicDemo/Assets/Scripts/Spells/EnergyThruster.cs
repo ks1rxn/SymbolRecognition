@@ -10,7 +10,7 @@ public class EnergyThruster : MonoBehaviour {
 	private Animator m_animator;
 
 	private void HandHoverUpdate(Hand hand) {
-		if (hand.GetStandardInteractionButtonDown()) {
+		if (hand.buttonsListener.GetStandardInteractionButtonDown()) {
 			m_animator.SetBool("TriggerPressed", true);
 			m_animator.SetBool("Idle", false);
 			hand.HoverLock(GetComponent<Interactable>());

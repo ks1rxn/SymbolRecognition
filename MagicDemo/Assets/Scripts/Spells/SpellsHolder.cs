@@ -10,7 +10,7 @@ public class SpellsHolder : MonoBehaviour {
 	[SerializeField]
 	private GameObject m_enegyThrusterPrefab;
 
-	protected void Awake() {
+	protected void Awake() { 
 		Game.EventService.RegisterListener(typeof(CastGodsHandMessage), OnCastGodsHand);
 		Game.EventService.RegisterListener(typeof(SpawnGodsFireballMessage), OnSpawnGodsFireball);
 		Game.EventService.RegisterListener(typeof(SpawnEnergyActivationMessage), OnCastEnergyActivation);

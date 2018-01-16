@@ -45,6 +45,8 @@ namespace Valve.VR.InteractionSystem {
 		[SerializeField]
 		private DebugViewer m_debugInTopRightCornerOfView;
 		[SerializeField]
+		private DebugViewer m_debugInTopLeftCornerOfView;
+		[SerializeField]
 		private DebugViewer m_debugInCenterOfView;
 
 		#region Getters
@@ -52,6 +54,12 @@ namespace Valve.VR.InteractionSystem {
 		public DebugViewer DebugInTopRightCornerOfView {
 			get {
 				return m_debugInTopRightCornerOfView;
+			}
+		}
+
+		public DebugViewer DebugInTopLeftCornerOfView {
+			get {
+				return m_debugInTopLeftCornerOfView;
 			}
 		}
 
@@ -239,10 +247,12 @@ namespace Valve.VR.InteractionSystem {
 
 		private void Start() {
 			m_debugInTopRightCornerOfView.SetActive(false);
+			m_debugInTopLeftCornerOfView.SetActive(false);
 			m_debugInCenterOfView.SetActive(true);
 
 			m_debugInCenterOfView.ShowLine(new DebugViewerLine("...", DebugViewerLineColor.Green), 1);
 			m_debugInTopRightCornerOfView.ShowLine(new DebugViewerLine("No actual debug info", DebugViewerLineColor.Red));
+			m_debugInTopLeftCornerOfView.ShowLine(new DebugViewerLine("No actual debug info", DebugViewerLineColor.Red));
 		}
 
 		//-------------------------------------------------

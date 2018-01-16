@@ -46,7 +46,7 @@ namespace Valve.VR.InteractionSystem
 		{
 			for ( int i = 0; i < holdingHands.Count; i++ )
 			{
-				if ( !holdingHands[i].GetStandardInteractionButton() )
+				if ( !holdingHands[i].buttonsListener.GetStandardInteractionButton() )
 				{
 					PhysicsDetach( holdingHands[i] );
 				}
@@ -83,7 +83,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private void HandHoverUpdate( Hand hand )
 		{
-			if ( hand.GetStandardInteractionButtonDown() )
+			if ( hand.buttonsListener.GetStandardInteractionButtonDown() )
 			{
 				PhysicsAttach( hand );
 			}

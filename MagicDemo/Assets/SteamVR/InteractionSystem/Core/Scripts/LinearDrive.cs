@@ -60,7 +60,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private void HandHoverUpdate( Hand hand )
 		{
-			if ( hand.GetStandardInteractionButtonDown() )
+			if ( hand.buttonsListener.GetStandardInteractionButtonDown() )
 			{
 				hand.HoverLock( GetComponent<Interactable>() );
 
@@ -69,14 +69,14 @@ namespace Valve.VR.InteractionSystem
 				mappingChangeRate = 0.0f;
 			}
 
-			if ( hand.GetStandardInteractionButtonUp() )
+			if ( hand.buttonsListener.GetStandardInteractionButtonUp() )
 			{
 				hand.HoverUnlock( GetComponent<Interactable>() );
 
 				CalculateMappingChangeRate();
 			}
 
-			if ( hand.GetStandardInteractionButton() )
+			if ( hand.buttonsListener.GetStandardInteractionButton() )
 			{
 				UpdateLinearMapping( hand.transform );
 			}
