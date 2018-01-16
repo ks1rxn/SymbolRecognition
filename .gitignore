@@ -41,7 +41,8 @@
 *.Resharper.user
 
 /MagicDemo/.vs/
-/MagicDemo/Assets/Models/Materials/Textures/Thumbs.db.meta
+Thumbs.db
+Thumbs.db.meta
 /MagicDemo/Assets/ShaderForge/
 /MagicDemo/Assets/ShaderForge.meta
 
