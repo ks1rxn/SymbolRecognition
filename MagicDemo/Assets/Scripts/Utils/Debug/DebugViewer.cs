@@ -7,17 +7,17 @@ using UnityEngine;
 
 public class DebugViewer : MonoBehaviour {
 	[SerializeField]
-	private TextMesh m_textOutput;
+	private TextMesh textOutput;
 	[SerializeField, Range(0, 1)]
-	private float m_textBrightness;
+	private float textBrightness;
 
-	private DateTime m_lastTextShownTime;
-	private int m_secondsUntilTextHide;
+	private DateTime lastTextShownTime;
+	private int secondsUntilTextHide;
 
 	[UsedImplicitly]
 	protected void Awake() {
-		m_textOutput.richText = true;
-		m_textOutput.text = "";
+		textOutput.richText = true;
+		textOutput.text = "";
 	}
 
 	[UsedImplicitly]
@@ -37,30 +37,30 @@ public class DebugViewer : MonoBehaviour {
 	}
 
 	public void ShowLine(DebugViewerLine text, int secondsUntilHide = 0) {
-		m_secondsUntilTextHide = secondsUntilHide;
+		secondsUntilTextHide = secondsUntilHide;
 		ProcessDebugText(new List<DebugViewerLine>{text});
 	}
 
 	public void ShowLines(List<DebugViewerLine> text, int secondsUntilHide = 0) {
-		m_secondsUntilTextHide = secondsUntilHide;
+		secondsUntilTextHide = secondsUntilHide;
 		ProcessDebugText(text);
 	}
 
 	private void ProcessDebugText(List<DebugViewerLine> lines) {
 		StringBuilder textForOutput = new StringBuilder();
 		foreach (DebugViewerLine line in lines) {
-			textForOutput.Append(line.MakeText(m_textBrightness) + Environment.NewLine);
+			textForOutput.Append(line.MakeText(textBrightness) + Environment.NewLine);
 		}
-		m_textOutput.text = textForOutput.ToString();
-		m_lastTextShownTime = DateTime.Now;
+		textOutput.text = textForOutput.ToString();
+		lastTextShownTime = DateTime.Now;
 	}
 
 	private void CheckForTimeToHideText() {
-		if (m_secondsUntilTextHide == 0) {
+		if (secondsUntilTextHide == 0) {
 			return;
 		}
-		if (m_lastTextShownTime + new TimeSpan(0, 0, m_secondsUntilTextHide) <= DateTime.Now) {
-			m_textOutput.text = "";
+		if (lastTextShownTime + new TimeSpan(0, 0, secondsUntilTextHide) <= DateTime.Now) {
+			textOutput.text = "";
 		}
 	}
 

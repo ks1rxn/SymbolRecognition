@@ -2360,7 +2360,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a927bf6212c14164899ef25224767499, type: 2}
+  - {fileID: 2100000, guid: a8ce9a1f9a0bf58408040c9bf8dfe23b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2904,8 +2905,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751c8edffd5bbca469679926cfc1bf85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_textOutput: {fileID: 102289725432525446}
-  m_textBrightness: 1
+  textOutput: {fileID: 102289725432525446}
+  textBrightness: 0.721
 --- !u!114 &114042231445294004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3032,8 +3033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751c8edffd5bbca469679926cfc1bf85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_textOutput: {fileID: 102651806894517530}
-  m_textBrightness: 1
+  textOutput: {fileID: 102651806894517530}
+  textBrightness: 0.744
 --- !u!114 &114236292121359266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3142,8 +3143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751c8edffd5bbca469679926cfc1bf85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_textOutput: {fileID: 102209709466294824}
-  m_textBrightness: 1
+  textOutput: {fileID: 102209709466294824}
+  textBrightness: 0.75
 --- !u!114 &114519286956522956
 MonoBehaviour:
   m_ObjectHideFlags: 1
