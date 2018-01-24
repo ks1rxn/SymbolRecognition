@@ -5,7 +5,7 @@ using System.Text;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class DebugViewer : MonoBehaviour {
+public class VRDebugViewer : MonoBehaviour {
 	[SerializeField]
 	private TextMesh textOutput;
 	[SerializeField, Range(0, 1)]
@@ -36,19 +36,19 @@ public class DebugViewer : MonoBehaviour {
 		gameObject.SetActive(active);
 	}
 
-	public void ShowLine(DebugViewerLine text, int secondsUntilHide = 0) {
+	public void ShowLine(VRDebugViewerLine text, int secondsUntilHide = 0) {
 		secondsUntilTextHide = secondsUntilHide;
-		ProcessDebugText(new List<DebugViewerLine>{text});
+		ProcessDebugText(new List<VRDebugViewerLine>{text});
 	}
 
-	public void ShowLines(List<DebugViewerLine> text, int secondsUntilHide = 0) {
+	public void ShowLines(List<VRDebugViewerLine> text, int secondsUntilHide = 0) {
 		secondsUntilTextHide = secondsUntilHide;
 		ProcessDebugText(text);
 	}
 
-	private void ProcessDebugText(List<DebugViewerLine> lines) {
+	private void ProcessDebugText(List<VRDebugViewerLine> lines) {
 		StringBuilder textForOutput = new StringBuilder();
-		foreach (DebugViewerLine line in lines) {
+		foreach (VRDebugViewerLine line in lines) {
 			textForOutput.Append(line.MakeText(textBrightness) + Environment.NewLine);
 		}
 		textOutput.text = textForOutput.ToString();

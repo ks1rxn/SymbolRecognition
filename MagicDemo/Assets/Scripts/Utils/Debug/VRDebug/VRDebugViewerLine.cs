@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 
-public class DebugViewerLine {
+public class VRDebugViewerLine {
 	private string text;
 	private DebugViewerLineColor color;
 
-	public DebugViewerLine(string text, DebugViewerLineColor color) {
+	public VRDebugViewerLine(string text, DebugViewerLineColor color) {
 		this.text = text;
 		this.color = color;
 	}
 
 	public string MakeText(float brightness) {
 		int brightnessRounded = Mathf.RoundToInt(Mathf.Clamp01(brightness) * 255);
-		return "<color=\"#" + MakeColorString(color) + brightnessRounded.ToString("X2") + "\">" + text + "</color>";
+		return "<color=\"#" + MakeColorString() + brightnessRounded.ToString("X2") + "\">" + text + "</color>";
 	}
 
-	private string MakeColorString(DebugViewerLineColor color) {
+	private string MakeColorString() {
 		switch (color) {
 			case DebugViewerLineColor.Red:
 				return "FF0000";

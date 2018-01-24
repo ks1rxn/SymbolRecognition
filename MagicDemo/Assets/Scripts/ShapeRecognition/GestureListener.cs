@@ -29,9 +29,9 @@ public class GestureListener : MonoBehaviour {
 
 	protected void Update() {
 		if (hand.GuessCurrentHandType() == Hand.HandType.Right) {
-			Player.instance.DebugInTopRightCornerOfView.ShowLine(new DebugViewerLine(state.ToString(), DebugViewerLineColor.Green));
+			Player.instance.VrDebugInTopRightCornerOfView.ShowLine(new VRDebugViewerLine(state.ToString(), DebugViewerLineColor.Green));
 		} else if (hand.GuessCurrentHandType() == Hand.HandType.Left) {
-			Player.instance.DebugInTopLeftCornerOfView.ShowLine(new DebugViewerLine(state.ToString(), DebugViewerLineColor.Green));
+			Player.instance.VrDebugInTopLeftCornerOfView.ShowLine(new VRDebugViewerLine(state.ToString(), DebugViewerLineColor.Green));
 		}
 
 		switch (state) {
@@ -40,6 +40,12 @@ public class GestureListener : MonoBehaviour {
 				break;
 			case GestureListenerState.Listening:
 				ListeningState();
+				break;
+			case GestureListenerState.ListeningShot:
+				ListeningShotState();
+				break;
+			case GestureListenerState.ListeningGesture:
+				ListeningGestureState();
 				break;
 		}
 	}
@@ -63,15 +69,61 @@ public class GestureListener : MonoBehaviour {
 	private void ToListeningState() {
 		state = GestureListenerState.Listening;
 
+		points = new List<Vector3>();
+
+		handAnimator.SetBool("IsTriggered", true);
 		foreach (ParticleSystem system in drawingIndicator) {
 			system.Play();
 		}
-		handAnimator.SetBool("IsTriggered", true);
-
-		points = new List<Vector3>();
 	}
 
 	private void ListeningState() {
+		points.Add(drawingFinger.transform.position);
+
+		if (points.Count > 20) {
+			if (IsItGesture()) {
+				ToListeningGestureState();
+			} else {
+				ToListeningShotState();
+			}
+		}
+		if (hand.buttonsListener.GetStandardInteractionButtonUp()) {
+			ToIdleState();
+		}
+	}
+
+	private bool IsItGesture() {
+		Vector3 center = CalculateSpellCenter();
+		float distSum = 0;
+		foreach (Vector3 point in points) {
+			float dist = Vector3.Distance(point, center);
+			distSum += dist;
+		}
+		return distSum > 0.5f;
+	}
+
+	private void ToListeningShotState() {
+		state = GestureListenerState.ListeningShot;
+	}
+
+	private void ListeningShotState() {
+		if (hand.buttonsListener.GetStandardInteractionButtonUp()) {
+			Vector3 center = CalculateSpellCenter();
+			Vector3 head = Player.instance.headCollider.transform.position;
+			Vector3 targetVector = (center - head).normalized;
+
+			//todo: to calculate speed vector use hand rotation, not center-head vector
+			Game.EventService.SendMessage(new SpawnGodsFireballMessage(center, targetVector * 0.005f * points.Count));
+
+			ToIdleState();
+		}
+	}
+
+	private void ToListeningGestureState() {
+		state = GestureListenerState.ListeningGesture;
+	}
+
+	private void ListeningGestureState() {
 		points.Add(drawingFinger.transform.position);
 
 		if (hand.buttonsListener.GetStandardInteractionButtonUp()) {
@@ -100,20 +152,15 @@ public class GestureListener : MonoBehaviour {
 				points[i] = pointNew;
 			}
 
-			foreach (Vector3 point in points) {
-//				Debug.Log(point);
-//				Game.EventService.SendMessage(new DebugSpellTrackerMessage(DebugSpellTrackerForm.Sphere, point, Quaternion.identity, 0.1f));
-			}
-
-			ShapeRecognizerResult result = ShapeRecognizer.Analyze(points);
-			if (result.Value <= ShapeRecognizerResult.MinPassValue) {
-				switch (result.Type) {
-					case ShapeType.Circle:
+			SymbolAnalyzerResult result = SymbolAnalyzer.Instance.Analyze(points);
+			if (result.IsPassed()) {
+				switch (result.SymbolType) {
+					case SymbolType.Circle:
 						Game.EventService.SendMessage(new CastGodsHandMessage(center, Quaternion.LookRotation(targetVector, targetUpVector)));
 						break;
-					case ShapeType.S:
+					case SymbolType.S:
 						break;
-					case ShapeType.Line:
+					case SymbolType.Line:
 						break;
 				}
 			}
@@ -215,7 +262,9 @@ public class GestureListener : MonoBehaviour {
 
 	private enum GestureListenerState {
 		Idle,
-		Listening
+		Listening,
+		ListeningShot,
+		ListeningGesture
 	}
 
 }

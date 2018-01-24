@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using Random = System.Random;
 
 class MathHelper {
@@ -47,6 +48,24 @@ class MathHelper {
 
 	public static float ValueWithDispertion(float value, float dispertion) {
 		return (float)Random.NextDouble() * dispertion * 2 - dispertion + value;
+	}
+
+	public static float CalculateAverageValue(List<float> values) {
+		float sumOfValues = 0;
+		for (int i = 0; i != values.Count; i++) {
+			sumOfValues += values[i];
+		}
+		float averageValue = sumOfValues / values.Count;
+		return averageValue;
+	}
+
+	public static float CalculateDispertionValue(List<float> values, float averageValue) {
+		float sumOfDispertionValues = 0;
+		for (int i = 0; i != values.Count; i++) {
+			sumOfDispertionValues += Mathf.Pow(values[i] - averageValue, 2);
+		}
+		float dispertionValue = Mathf.Sqrt(sumOfDispertionValues / values.Count);
+		return dispertionValue;
 	}
 
 	public static Random Random {
