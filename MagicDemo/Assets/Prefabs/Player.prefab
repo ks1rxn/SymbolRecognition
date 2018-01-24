@@ -493,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1537648611851526
 GameObject:
   m_ObjectHideFlags: 1
@@ -2815,7 +2815,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957346749868460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 751c8edffd5bbca469679926cfc1bf85, type: 3}
+  m_Script: {fileID: 11500000, guid: 350497ab00312d545be45ca9e2b6f050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textOutput: {fileID: 102289725432525446}
@@ -2942,7 +2942,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061433138743034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 751c8edffd5bbca469679926cfc1bf85, type: 3}
+  m_Script: {fileID: 11500000, guid: 350497ab00312d545be45ca9e2b6f050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textOutput: {fileID: 102651806894517530}
@@ -3052,7 +3052,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1576009629366730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 751c8edffd5bbca469679926cfc1bf85, type: 3}
+  m_Script: {fileID: 11500000, guid: 350497ab00312d545be45ca9e2b6f050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textOutput: {fileID: 102209709466294824}
@@ -3172,9 +3172,9 @@ MonoBehaviour:
   rig2DFallback: {fileID: 1239158017376480}
   rigSteamVR: {fileID: 1688172755982908}
   trackingOriginTransform: {fileID: 4364936819662734}
-  m_debugInTopRightCornerOfView: {fileID: 114515893941964506}
-  m_debugInTopLeftCornerOfView: {fileID: 114023078453226944}
-  m_debugInCenterOfView: {fileID: 114204392338932398}
+  vrDebugInTopRightCornerOfView: {fileID: 114515893941964506}
+  vrDebugInTopLeftCornerOfView: {fileID: 114023078453226944}
+  vrDebugInCenterOfView: {fileID: 114204392338932398}
 --- !u!114 &114751070190656238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10009,7 +10009,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -836432284
+  randomSeed: -863488170
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13271,7 +13271,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1670997510
+  randomSeed: -488491613
   InitialModule:
     serializedVersion: 3
     enabled: 1

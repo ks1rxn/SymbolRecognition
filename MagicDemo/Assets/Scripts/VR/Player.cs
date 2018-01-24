@@ -43,29 +43,29 @@ namespace Valve.VR.InteractionSystem {
 		public Transform trackingOriginTransform;
 
 		[SerializeField]
-		private DebugViewer m_debugInTopRightCornerOfView;
+		private VRDebugViewer vrDebugInTopRightCornerOfView;
 		[SerializeField]
-		private DebugViewer m_debugInTopLeftCornerOfView;
+		private VRDebugViewer vrDebugInTopLeftCornerOfView;
 		[SerializeField]
-		private DebugViewer m_debugInCenterOfView;
+		private VRDebugViewer vrDebugInCenterOfView;
 
 		#region Getters
 
-		public DebugViewer DebugInTopRightCornerOfView {
+		public VRDebugViewer VrDebugInTopRightCornerOfView {
 			get {
-				return m_debugInTopRightCornerOfView;
+				return vrDebugInTopRightCornerOfView;
 			}
 		}
 
-		public DebugViewer DebugInTopLeftCornerOfView {
+		public VRDebugViewer VrDebugInTopLeftCornerOfView {
 			get {
-				return m_debugInTopLeftCornerOfView;
+				return vrDebugInTopLeftCornerOfView;
 			}
 		}
 
-		public DebugViewer DebugInCenterOfView {
+		public VRDebugViewer VrDebugInCenterOfView {
 			get {
-				return m_debugInCenterOfView;
+				return vrDebugInCenterOfView;
 			}
 		}
 
@@ -246,13 +246,13 @@ namespace Valve.VR.InteractionSystem {
 		}
 
 		private void Start() {
-			m_debugInTopRightCornerOfView.SetActive(false);
-			m_debugInTopLeftCornerOfView.SetActive(false);
-			m_debugInCenterOfView.SetActive(true);
+			vrDebugInTopRightCornerOfView.SetActive(false);
+			vrDebugInTopLeftCornerOfView.SetActive(false);
+			vrDebugInCenterOfView.SetActive(true);
 
-			m_debugInCenterOfView.ShowLine(new DebugViewerLine("...", DebugViewerLineColor.Green), 1);
-			m_debugInTopRightCornerOfView.ShowLine(new DebugViewerLine("No actual debug info", DebugViewerLineColor.Red));
-			m_debugInTopLeftCornerOfView.ShowLine(new DebugViewerLine("No actual debug info", DebugViewerLineColor.Red));
+			vrDebugInCenterOfView.ShowLine(new VRDebugViewerLine("...", DebugViewerLineColor.Green), 1);
+			vrDebugInTopRightCornerOfView.ShowLine(new VRDebugViewerLine("No actual debug info", DebugViewerLineColor.Red));
+			vrDebugInTopLeftCornerOfView.ShowLine(new VRDebugViewerLine("No actual debug info", DebugViewerLineColor.Red));
 		}
 
 		//-------------------------------------------------

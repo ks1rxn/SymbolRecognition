@@ -574,8 +574,8 @@ namespace Valve.VR.InteractionSystem {
 			}
 
 			if (buttonsListener.GetGripButtonDown()) {
-				Player.instance.DebugInTopRightCornerOfView.SetActive(!Player.instance.DebugInTopRightCornerOfView.IsActive());
-				Player.instance.DebugInTopLeftCornerOfView.SetActive(!Player.instance.DebugInTopLeftCornerOfView.IsActive());
+				Player.instance.VrDebugInTopRightCornerOfView.SetActive(!Player.instance.VrDebugInTopRightCornerOfView.IsActive());
+				Player.instance.VrDebugInTopLeftCornerOfView.SetActive(!Player.instance.VrDebugInTopLeftCornerOfView.IsActive());
 			}
 		}
 
