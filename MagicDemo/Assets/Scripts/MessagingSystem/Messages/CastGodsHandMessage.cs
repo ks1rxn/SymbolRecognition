@@ -1,23 +1,15 @@
 ﻿using UnityEngine;
 
 public class CastGodsHandMessage : IMessage {
-	private Vector3 castPosition;
-	private Quaternion rotation;
+	private CustomSymbol symbol;
 
-	public CastGodsHandMessage(Vector3 position, Quaternion rotation) {
-		castPosition = position;
-		this.rotation = rotation;
+	public CastGodsHandMessage(CustomSymbol symbol) {
+		this.symbol = symbol;
 	}
 
-	public Vector3 CastPosition {
+	public CustomSymbol Symbol {
 		get {
-			return castPosition;
-		}
-	}
-
-	public Quaternion Rotation {
-		get {
-			return rotation;
+			return symbol;
 		}
 	}
 

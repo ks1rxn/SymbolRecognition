@@ -19,7 +19,7 @@ public class SpellsHolder : MonoBehaviour {
 
 	private void OnCastGodsHand(IMessage msg) {
 		CastGodsHandMessage message = (CastGodsHandMessage) msg;
-		Instantiate(godsHandPrefab, message.CastPosition, message.Rotation, transform);
+		Instantiate(godsHandPrefab, message.Symbol.Center, Quaternion.LookRotation(message.Symbol.Orientation.Forward, message.Symbol.Orientation.Up), transform);
 	}
 
 	private void OnSpawnGodsFireball(IMessage msg) {

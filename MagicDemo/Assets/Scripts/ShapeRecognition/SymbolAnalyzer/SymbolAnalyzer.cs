@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class SymbolAnalyzer {
@@ -20,7 +21,7 @@ public class SymbolAnalyzer {
 	}
 
 	public SymbolAnalyzerResult Analyze(List<Vector3> points) {
-		List<SymbolComparationResult> comparationResults = symbolComparator.CompareShapeWithAllExamples(points);
+		List<SymbolComparationResult> comparationResults = symbolComparator.CompareCustomSymbolWithAllTemplates(points);
 		SymbolComparationResult bestResult = GetBestResult(comparationResults);
 		SymbolAnalyzerResult resultOfAnalyze = new SymbolAnalyzerResult(bestResult.Type, bestResult.Value);
 		return resultOfAnalyze;

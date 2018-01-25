@@ -13,7 +13,8 @@ public class SymbolTemplate {
 }
 
 public enum SymbolType {
-	Circle,
-	S,
-	Line
+	Unrecognized = 0,
+	Circle = 1,
+	S = 2,
+	Line = 3
 }
