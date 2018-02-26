@@ -1074,6 +1074,16 @@ Prefab:
       propertyPath: ShapeModule.m_MeshRenderer
       value: 
       objectReference: {fileID: 2101472310}
+    - target: {fileID: 198521025385444216, guid: d93fe1683e57d1b4f8dc2ab807c2d181,
+        type: 2}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198521025385444216, guid: d93fe1683e57d1b4f8dc2ab807c2d181,
+        type: 2}
+      propertyPath: randomSeed
+      value: 1964617426
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d93fe1683e57d1b4f8dc2ab807c2d181, type: 2}
   m_IsPrefabParent: 0
