@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: 9a58733f20748b94cb149fb7000b25c3
+timeCreated: 1519596153
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: breast
+    100002: face
+    100004: goat_character
+    100006: head
+    100008: head_tip
+    100010: horn1
+    100012: horn17
+    100014: horn2
+    100016: horn2 1
+    100018: horn3
+    100020: horn3 1
+    100022: horn4
+    100024: horn4 1
+    100026: horn5
+    100028: horn5 1
+    100030: horn6
+    100032: horn6 1
+    100034: horn7
+    100036: horn7 1
+    100038: horn8
+    100040: horn8 1
+    100042: jaw
+    100044: joint44
+    100046: joint44 1
+    100048: left_ankle
+    100050: left_ball
+    100052: left_clavical
+    100054: left_ear
+    100056: left_ear_tip
+    100058: left_elbow
+    100060: left_elbow_roll
+    100062: left_hand
+    100064: left_hing
+    100066: left_index_1
+    100068: left_index_2
+    100070: left_index_3
+    100072: left_knee
+    100074: left_knee_roll
+    100076: left_leg_roll
+    100078: left_long_1
+    100080: left_long_2
+    100082: left_long_3
+    100084: left_long_finger_base
+    100086: left_middle1
+    100088: left_middle2
+    100090: left_middle3
+    100092: left_middle_finger_base
+    100094: left_pinky1
+    100096: left_pinky2
+    100098: left_pinky3
+    100100: left_pinky_base
+    100102: left_shoulder
+    100104: left_shoulder_roll
+    100106: left_thumb_1
+    100108: left_thumb_base
+    100110: left_tip
+    100112: left_waist
+    100114: left_wrist
+    100116: leftt_thumb_2
+    100118: //RootNode
+    100120: neck
+    100122: over_jaw
+    100124: right_ankle
+    100126: right_ball
+    100128: right_clavical
+    100130: right_ear
+    100132: right_ear_tip
+    100134: right_elbow
+    100136: right_elbow_roll
+    100138: right_hand1
+    100140: right_hing
+    100142: right_index_1
+    100144: right_index_2
+    100146: right_index_3
+    100148: right_index_base
+    100150: right_index_base 1
+    100152: right_knee
+    100154: right_knee_roll
+    100156: right_leg_roll
+    100158: right_long_1
+    100160: right_long_2
+    100162: right_long_3
+    100164: right_long_finger_base
+    100166: right_middle1
+    100168: right_middle2
+    100170: right_middle3
+    100172: right_middle_finger_base
+    100174: right_pinky1
+    100176: right_pinky2
+    100178: right_pinky3
+    100180: right_pinky_base
+    100182: right_shoulder
+    100184: right_shoulder_roll
+    100186: right_thumb_1
+    100188: right_thumb_2
+    100190: right_thumb_base1
+    100192: right_tip
+    100194: right_waist
+    100196: right_wrist
+    100198: root
+    100200: spine1
+    100202: spine2
+    100204: spine3
+    100206: tail1
+    100208: tail10
+    100210: tail11
+    100212: tail12
+    100214: tail13
+    100216: tail14
+    100218: tail2
+    100220: tail3
+    100222: tail4
+    100224: tail5
+    100226: tail6
+    100228: tail7
+    100230: tail8
+    100232: tail9
+    100234: tail_tip
+    100236: under_jaw
+    400000: breast
+    400002: face
+    400004: goat_character
+    400006: head
+    400008: head_tip
+    400010: horn1
+    400012: horn17
+    400014: horn2
+    400016: horn2 1
+    400018: horn3
+    400020: horn3 1
+    400022: horn4
+    400024: horn4 1
+    400026: horn5
+    400028: horn5 1
+    400030: horn6
+    400032: horn6 1
+    400034: horn7
+    400036: horn7 1
+    400038: horn8
+    400040: horn8 1
+    400042: jaw
+    400044: joint44
+    400046: joint44 1
+    400048: left_ankle
+    400050: left_ball
+    400052: left_clavical
+    400054: left_ear
+    400056: left_ear_tip
+    400058: left_elbow
+    400060: left_elbow_roll
+    400062: left_hand
+    400064: left_hing
+    400066: left_index_1
+    400068: left_index_2
+    400070: left_index_3
+    400072: left_knee
+    400074: left_knee_roll
+    400076: left_leg_roll
+    400078: left_long_1
+    400080: left_long_2
+    400082: left_long_3
+    400084: left_long_finger_base
+    400086: left_middle1
+    400088: left_middle2
+    400090: left_middle3
+    400092: left_middle_finger_base
+    400094: left_pinky1
+    400096: left_pinky2
+    400098: left_pinky3
+    400100: left_pinky_base
+    400102: left_shoulder
+    400104: left_shoulder_roll
+    400106: left_thumb_1
+    400108: left_thumb_base
+    400110: left_tip
+    400112: left_waist
+    400114: left_wrist
+    400116: leftt_thumb_2
+    400118: //RootNode
+    400120: neck
+    400122: over_jaw
+    400124: right_ankle
+    400126: right_ball
+    400128: right_clavical
+    400130: right_ear
+    400132: right_ear_tip
+    400134: right_elbow
+    400136: right_elbow_roll
+    400138: right_hand1
+    400140: right_hing
+    400142: right_index_1
+    400144: right_index_2
+    400146: right_index_3
+    400148: right_index_base
+    400150: right_index_base 1
+    400152: right_knee
+    400154: right_knee_roll
+    400156: right_leg_roll
+    400158: right_long_1
+    400160: right_long_2
+    400162: right_long_3
+    400164: right_long_finger_base
+    400166: right_middle1
+    400168: right_middle2
+    400170: right_middle3
+    400172: right_middle_finger_base
+    400174: right_pinky1
+    400176: right_pinky2
+    400178: right_pinky3
+    400180: right_pinky_base
+    400182: right_shoulder
+    400184: right_shoulder_roll
+    400186: right_thumb_1
+    400188: right_thumb_2
+    400190: right_thumb_base1
+    400192: right_tip
+    400194: right_waist
+    400196: right_wrist
+    400198: root
+    400200: spine1
+    400202: spine2
+    400204: spine3
+    400206: tail1
+    400208: tail10
+    400210: tail11
+    400212: tail12
+    400214: tail13
+    400216: tail14
+    400218: tail2
+    400220: tail3
+    400222: tail4
+    400224: tail5
+    400226: tail6
+    400228: tail7
+    400230: tail8
+    400232: tail9
+    400234: tail_tip
+    400236: under_jaw
+    4300000: goat_character
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: goat_character
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 250
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
